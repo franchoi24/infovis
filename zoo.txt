@@ -1,0 +1,9 @@
+visual encodings
+graphical perception
+visual attributes
+horizon graph
+stem-and-leaf plot
+“information-empty” bars
+scatter plot matrix
+community-detection algorithm
+effective display
