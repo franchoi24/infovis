@@ -39,7 +39,7 @@
 
 .description {
     position: absolute;
-    left: 0%;
+    left: 50%;
     transform: translate(-50%, -50%);
     bottom: 0%;
 }
