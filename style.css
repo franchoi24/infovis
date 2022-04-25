@@ -1,19 +1,12 @@
-body {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.7;
-    color: #eee;
-}
 
 .header {
-    height: 50vh;
+    height: 70vh;
     background-image: 
     linear-gradient(to right bottom, 
      rgba(76, 216, 255, 0.8),
      rgba(30, 108, 217, 0.8)),
      url('https://franchoi24.github.io/infovis/milanesa.jpeg');
-    
+    color: #fff;
   background-size: cover;
     background-position: top;
     position: relative;
@@ -35,6 +28,12 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+}
+
+.description {
+    position: absolute;
+    left: 0%;
+    transform: translate(-50%, -50%);
 }
 
 .heading-primary {
