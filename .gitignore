@@ -1,6 +1,10 @@
 
 .idea/
 
+tpVast/media/*
+
 *.twbr
 
 *.twb
+
+tpVast/media/
