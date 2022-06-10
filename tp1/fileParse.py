@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import csv
 def importData():
-    df = pd.read_csv('newRappi3.csv', sep=",")
+    df = pd.read_csv('/Users/franciscochoi/Desktop/infovis/tp1/newRappi3.csv', sep=",")
     data = df.to_numpy()
     return data
 

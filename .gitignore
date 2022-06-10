@@ -8,3 +8,9 @@ tpVast/media/*
 *.twb
 
 tpVast/media/
+
+tpVast/res/
+
+tpVast/.DS_Store
+
+.DS_Store

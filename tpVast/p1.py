@@ -8,18 +8,28 @@ from os.path import isfile, join
 
 
 def importData():
-    path = 'media'
+    path = '/Users/franciscochoi/Downloads/VAST-Challenge-2022/Datasets/Journals'
     sample_path = 'media/Participants_sample.csv'
     sample = pd.read_csv(sample_path, index_col=None, header=0)
     onlyfiles = [f for f in listdir(path) if isfile(join(path, f))]
     #li = []
     for filename in onlyfiles:
-        if filename != "Participants_sample.csv" and filename != "script.sh" and filename != ".DS_Store":
+        if filename != "Participants_sample.csv" and filename != "script.sh" and filename != ".DS_Store" and filename != 'SocialNetwork.csv':
             print(filename)
             df = pd.read_csv(path + '/' + filename, index_col=None, header=0)
             ds = pd.merge(df, sample, on="participantId", how="inner")
             ds.to_csv(filename)
             #li.append(ds)
+
+def processFinantial():
+    path = '/Users/franciscochoi/Downloads/VAST-Challenge-2022/Datasets/Journals/FinancialJournal.csv'
+    sample_path = 'media/Participants_sample.csv'
+    sample = pd.read_csv(sample_path, index_col=None, header=0)
+    df = pd.read_csv(path, index_col=None, header=0)
+    ds = pd.merge(df, sample, on="participantId", how="inner")
+    #ds.sort_values(by=['timestamp','participants', ascending=True)
+    ds.sort_index()
+    ds.to_csv('FinancialJournal.csv')
 
 def importLogs():
     path = './PartLog.csv'
@@ -27,7 +37,4 @@ def importLogs():
     return df
 
 
-importLogs()
-print("fff")
-#frame.to_csv('PartLog.csv')
-#print(len(frame))
+processFinantial()
