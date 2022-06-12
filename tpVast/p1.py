@@ -31,6 +31,16 @@ def processFinantial():
     ds.sort_index()
     ds.to_csv('FinancialJournal.csv')
 
+def processFinantial():
+    path = '/Users/franciscochoi/Downloads/VAST-Challenge-2022/Datasets/Attributes/Participants.csv'
+    sample_path = 'media/Participants_sample.csv'
+    sample = pd.read_csv(sample_path, index_col=None, header=0)
+    df = pd.read_csv(path, index_col=None, header=0)
+    ds = pd.merge(df, sample, on="participantId", how="inner")
+    #ds.sort_values(by=['timestamp','participants', ascending=True)
+    ds.sort_index()
+    ds.to_csv('Participants.csv')
+
 def importLogs():
     path = './PartLog.csv'
     df = pd.read_csv(path, index_col=None, header=0)
